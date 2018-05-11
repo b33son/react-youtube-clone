@@ -41,10 +41,10 @@ export default class SearchBar extends Component {
       <Grid>
         <Grid.Column width={8}>
           <Search
-            showNoResults
+            showNoResults={false}
             loading={isLoading}
             // onResultSelect={this.handleResultSelect}
-            onSearchChange={_.debounce(this.onSearchChange, 500, {
+            onSearchChange={_.debounce(this.onSearchChange, 2000, {
               leading: true
             })}
             // results={this.props.searchResults}
